@@ -1,0 +1,71 @@
+{
+    "data": {
+      "countries": [
+        {
+          "countryId": 1,
+          "countryName": "India",
+          "universities": [
+            {"universityId": 1, "universityName": "Indian Institute of Technology Bombay", "website": "https://www.iitb.ac.in/", "state": "Maharashtra"},
+            {"universityId": 2, "universityName": "University of Delhi", "website": "https://www.du.ac.in/", "state": "Delhi"},
+            {"universityId": 3, "universityName": "Indian Institute of Science Bangalore", "website": "https://www.iisc.ac.in/", "state": "Karnataka"},
+            {"universityId": 4, "universityName": "Indian Institute of Technology Delhi", "website": "https://home.iitd.ac.in/", "state": "Delhi"},
+            {"universityId": 5, "universityName": "Indian Institute of Technology Madras", "website": "https://www.iitm.ac.in/", "state": "Tamil Nadu"},
+            {"universityId": 6, "universityName": "University of Mumbai", "website": "https://mu.ac.in/", "state": "Maharashtra"},
+            {"universityId": 7, "universityName": "Indian Institute of Technology Kanpur", "website": "https://www.iitk.ac.in/", "state": "Uttar Pradesh"},
+            {"universityId": 8, "universityName": "Indian Institute of Technology Kharagpur", "website": "https://www.iitkgp.ac.in/", "state": "West Bengal"},
+            {"universityId": 9, "universityName": "University of Calcutta", "website": "http://www.caluniv.ac.in/", "state": "West Bengal"},
+            {"universityId": 10, "universityName": "Indian Institute of Technology Roorkee", "website": "https://www.iitr.ac.in/", "state": "Uttarakhand"}
+          ]
+        },
+        {
+          "countryId": 2,
+          "countryName": "USA",
+          "universities": [
+            {"universityId": 1, "universityName": "Harvard University", "website": "https://www.harvard.edu/", "state": "Massachusetts"},
+            {"universityId": 2, "universityName": "Stanford University", "website": "https://www.stanford.edu/", "state": "California"},
+            {"universityId": 3, "universityName": "Massachusetts Institute of Technology", "website": "http://web.mit.edu/", "state": "Massachusetts"},
+            {"universityId": 4, "universityName": "California Institute of Technology", "website": "https://www.caltech.edu/", "state": "California"},
+            {"universityId": 5, "universityName": "University of California, Berkeley", "website": "https://www.berkeley.edu/", "state": "California"},
+            {"universityId": 6, "universityName": "University of Chicago", "website": "https://www.uchicago.edu/", "state": "Illinois"},
+            {"universityId": 7, "universityName": "Columbia University", "website": "https://www.columbia.edu/", "state": "New York"},
+            {"universityId": 8, "universityName": "Yale University", "website": "https://www.yale.edu/", "state": "Connecticut"},
+            {"universityId": 9, "universityName": "Princeton University", "website": "https://www.princeton.edu/", "state": "New Jersey"},
+            {"universityId": 10, "universityName": "University of Pennsylvania", "website": "https://www.upenn.edu/", "state": "Pennsylvania"}
+          ]
+        },
+        {
+          "countryId": 3,
+          "countryName": "Australia",
+          "universities": [
+            {"universityId": 1, "universityName": "The University of Melbourne", "website": "https://www.unimelb.edu.au/", "state": "Victoria"},
+            {"universityId": 2, "universityName": "Australian National University", "website": "https://www.anu.edu.au/", "state": "Australian Capital Territory"},
+            {"universityId": 3, "universityName": "The University of Sydney", "website": "https://www.sydney.edu.au/", "state": "New South Wales"},
+            {"universityId": 4, "universityName": "The University of Queensland", "website": "https://www.uq.edu.au/", "state": "Queensland"},
+            {"universityId": 5, "universityName": "Monash University", "website": "https://www.monash.edu/", "state": "Victoria"},
+            {"universityId": 6, "universityName": "The University of New South Wales", "website": "https://www.unsw.edu.au/", "state": "New South Wales"},
+            {"universityId": 7, "universityName": "The University of Western Australia", "website": "https://www.uwa.edu.au/", "state": "Western Australia"},
+            {"universityId": 8, "universityName": "The University of Adelaide", "website": "https://www.adelaide.edu.au/", "state": "South Australia"},
+            {"universityId": 9, "universityName": "University of Technology Sydney", "website": "https://www.uts.edu.au/", "state": "New South Wales"},
+            {"universityId": 10, "universityName": "University of Western Sydney", "website": "https://www.westernsydney.edu.au/", "state": "New South Wales"}
+          ]
+        },
+        {
+          "countryId": 4,
+          "countryName": "UK",
+          "universities": [
+            {"universityId": 1, "universityName": "University of Oxford", "website": "https://www.ox.ac.uk/", "state": "England"},
+            {"universityId": 2, "universityName": "University of Cambridge", "website": "https://www.cam.ac.uk/", "state": "England"},
+            {"universityId": 3, "universityName": "Imperial College London", "website": "https://www.imperial.ac.uk/", "state": "England"},
+            {"universityId": 4, "universityName": "London School of Economics and Political Science", "website": "https://www.lse.ac.uk/", "state": "England"},
+            {"universityId": 5, "universityName": "University College London", "website": "https://www.ucl.ac.uk/", "state": "England"},
+            {"universityId": 6, "universityName": "University of Edinburgh", "website": "https://www.ed.ac.uk/", "state": "Scotland"},
+            {"universityId": 7, "universityName": "University of Manchester", "website": "https://www.manchester.ac.uk/", "state": "England"},
+            {"universityId": 8, "universityName": "University of Bristol", "website": "https://www.bristol.ac.uk/", "state": "England"},
+            {"universityId": 9, "universityName": "University of Glasgow", "website": "https://www.gla.ac.uk/", "state": "Scotland"},
+            {"universityId": 10, "universityName": "University of Birmingham", "website": "https://www.birmingham.ac.uk/", "state": "England"}
+          ]
+        }
+      ]
+    }
+  }
+  
