@@ -13,11 +13,12 @@ import Pagination from '@mui/material/Pagination';
 import { PieChart, Pie, Cell, Tooltip, Legend , BarChart, Bar,XAxis,YAxis,CartesianGrid, } from 'recharts';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-//import domtoimage from 'dom-to-image';
 
-
-
-
+//import { styled } from '@mui/system';
+// import { Tabs } from '@mui/base/Tabs';
+// import { TabsList } from '@mui/base/TabsList';
+// import { TabPanel } from '@mui/base/TabPanel';
+// import { Tab } from '@mui/base/Tab';
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -29,6 +30,8 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     fontSize: 14,
   },
 }));
+
+
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
@@ -42,6 +45,11 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 const countries = ['India', 'USA', 'UK', 'Canada', 'Australia', 'Germany', 'France', 'Italy', 'Spain', 'China'];
 
+
+// tab panel design:- 
+
+
+
 export default function CustomizedTables() {
   const [selectedCountry, setSelectedCountry] = useState('India');
   const [data, setData] = useState([]);
@@ -51,15 +59,14 @@ export default function CustomizedTables() {
   const [chartType, setChartType] = useState("pie");
   const chartRef = useRef(null);
   const [isChartReady, setIsChartReady] = useState(false);
-  //const [pieChartRef, setPieChartRef] = useState(null);
   const itemsPerPage = 5;
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
   
-  useEffect(() => {
+  useEffect(()=>{
     if (chartRef.current) {
       setIsChartReady(true);
     }
-  }, [chartRef]);
+  },[chartRef]);
 
 
   useEffect(() => {
@@ -123,6 +130,8 @@ export default function CustomizedTables() {
           </MenuItem>
         ))}
       </Select>
+
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
@@ -163,7 +172,6 @@ export default function CustomizedTables() {
 
 
 {chartType === "pie" ? (
-
     <div ref={chartRef}  id="pie-chart">
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop:"50px" }}>
     <h3 className="text-center ">State Distribution (Pie Chart)</h3>
@@ -174,7 +182,7 @@ export default function CustomizedTables() {
      <PieChart  width={500} height={500}>
   <Pie
     data={pieData}
-    cx={200}
+    cx={250}
     cy={200}
     labelLine={false}
     label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
@@ -220,6 +228,7 @@ export default function CustomizedTables() {
       Download as PDF
     </button>
   </div>
+  
     </div>
   );
 }

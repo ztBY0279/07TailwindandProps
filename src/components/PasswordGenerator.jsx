@@ -1,12 +1,17 @@
 //import React from 'react'
 
-import { useState ,useEffect} from "react";
+import { useState ,useEffect, useRef} from "react";
 
 export default function PasswordGenerator() {
        const[password,setPassword] = useState("");
        const[includeNumber,setincludeNumber] = useState(false);
        const[includeSpecialChar,setincludeSpecialChar] = useState(false);
        const[sliderRange,setSliderRange] = useState(8);
+
+       const inputpasswordCopy = useRef(null);
+       const buttonRef = useRef(null);
+       console.log('the value of buttonref is ',buttonRef);
+       console.log('the value of useRef is ',useRef(null))
 
        function randomPasswordGenerator(isIncludeNumber = false,isIncludeSpecialChar = false) {
         let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -19,7 +24,7 @@ export default function PasswordGenerator() {
 
         if(isIncludeSpecialChar){
             characters += specialCharacters;
-            console.log('the characters is (in case of Special Char) ',characters);
+            console.log('the characters is (in case of Special Char)',characters);
         }
        
       
@@ -45,13 +50,13 @@ export default function PasswordGenerator() {
 
        function handleChangeCheckboxNumber(event){
            console.log('the value of event is ',event.target.checked);
-           setPassword(randomPasswordGenerator(event.target.checked,includeSpecialChar));
+          //setPassword(randomPasswordGenerator(event.target.checked,includeSpecialChar));
            setincludeNumber(event.target.checked);
        }
        
        function handleChangeCheckboxSpecialChar(event){
         console.log('the value of event is ',event.target.checked);
-        setPassword(randomPasswordGenerator(includeNumber,event.target.checked));
+       // setPassword(randomPasswordGenerator(includeNumber,event.target.checked));
         setincludeSpecialChar(event.target.checked);
        }
 
@@ -59,6 +64,12 @@ export default function PasswordGenerator() {
           console.log('handleClick is called and password is ',password);
           console.log('the navigator object is ',navigator);
           console.log('the clipboard object is ',navigator.clipboard);
+          console.log('the inputpasswordCopy is ', inputpasswordCopy,inputpasswordCopy.current);
+          console.log('the value of button ref is ',buttonRef,buttonRef.current);
+          
+          inputpasswordCopy?.current.select();
+          let customPassword = inputpasswordCopy?.current.setSelectionRange(0, 3);
+          console.log('the value of customPassword is ' + customPassword);
           navigator.clipboard.writeText(password)
           .then((data)=>{
              console.log('password are copied to clipboard and data is ',data);
@@ -66,15 +77,15 @@ export default function PasswordGenerator() {
           .catch((error)=>{
              console.log('error is ',error);
            })
+          
        }
 
        useEffect(()=>{
-        
         console.log('the useEffect is called');
-        let password1 = randomPasswordGenerator();
+        let password1 = randomPasswordGenerator(includeSpecialChar,includeSpecialChar);
         setPassword(password1);
        },
-       []
+       [includeNumber,includeSpecialChar]
     )
      
   return (
@@ -84,8 +95,13 @@ export default function PasswordGenerator() {
             <h1>Random Password Generator</h1>
            <p>Create strong and secure passwords to keep your account safe online.</p> 
         </div>
-        <input  type="text" className=" border-2 border-solid border-black rounded w-96 h-8" value={password} readOnly/>
-        <button className="btn bg-purple-500 p-1 rounded px-2" onClick={handleClick}>Copy</button>
+        <input 
+          type="text" className=" border-2 border-solid border-black rounded w-96 h-8" 
+          value={password}
+          readOnly
+         ref={inputpasswordCopy}
+           />
+        <button className="btn bg-purple-500 p-1 rounded px-2" onClick={handleClick} ref={buttonRef}>Copy</button>
         <br/>
         <input className="mr-3" type="range" step={1} min={8} max={25} defaultValue={8} onChange={handleChange} />
         <span className="mr-2">{sliderRange}</span>

@@ -9,7 +9,11 @@ import "./components/styles/style.css"
 //import CustomizedTables from './components/Table'
 //import CustomizedTables1 from './components/AdvanceTable'
 import CustomizedTablesWithPagination from './components/TableWithPagination'
+import PasswordGenerator from './components/PasswordGenerator'
+import UseRefHook from './components/UseRefHook'
+import PasswordGeneratorWithHooks from './components/PasswordGeneratorWithHooks'
 // import CustomizedTablesPiChart from './components/PieChart'
+//import UnstyledTabsCustomized from './components/Tabs'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <HeroOne/>
@@ -27,6 +31,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <CustomizedTablesWithPagination/>
     {/* <div>below is the table with pagination</div> */}
     {/* <CustomizedTablesPiChart/> */}
-   
+    {/* <UnstyledTabsCustomized/> */}
+    <PasswordGenerator/>
+    <UseRefHook/>
+    <PasswordGeneratorWithHooks/>
   </React.StrictMode>,
 )
